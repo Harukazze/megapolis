@@ -4,7 +4,7 @@ with open('students.csv', encoding='utf-8') as file:
     reader = list(csv.DictReader(file, delimiter=','))
     sum_score = {}
     count_scores = {}
-    for row in reader:
+    for row in reader: #Ищем Хадарова Дмитрия в нашей таблице
         if 'Хадаров Владимир' in row['Name']:
             print(f'Ты получил: {row["score"]}, за проект - {row["titleProject_id"]}')
 
