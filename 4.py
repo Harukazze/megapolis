@@ -2,12 +2,14 @@ import random, csv
 from string import ascii_letters, digits
 
 
+#функция для создания пароля
 def create_password():
     letter_digit = ascii_letters + digits
     password = ''.join(random.choices(letter_digit, k=8))
     return password
 
 
+#функция для создания логина
 def create_login(name):
     name = name.split()
     return f'{name[0]}_{name[1][0]}{name[2][0]}'
